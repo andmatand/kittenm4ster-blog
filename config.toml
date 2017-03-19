@@ -1,0 +1,11 @@
+languageCode = "en-us"
+title = "blog of kittenm4ster"
+baseURL = "https://kittenm4ster.neocities.org/blog/"
+author = "kittenm4ster"
+canonifyurls = true
+
+theme = "paperback"
+HomepagePosts = 5
+
+[taxonomies]
+tag = "tags"
