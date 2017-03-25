@@ -1,0 +1,11 @@
+<div class="metadata">
+  {{ if eq .Type "post" }}
+    <time datetime="{{ .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
+  {{ end }}
+
+  <ul class="tags">
+    {{ range .Params.tags }}
+    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a> </li>
+    {{ end }}
+  </ul>
+</div>

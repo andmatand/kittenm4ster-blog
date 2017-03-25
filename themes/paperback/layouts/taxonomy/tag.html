@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+    <div class="container">
+
+      {{ partial "header.html" . }}
+
+      <article>
+
+        <section id="main">
+          <div>
+            {{ range .Data.Pages }}
+              {{ .Render "list-item" }}
+            {{ end }}
+          </div>
+        </section>
+
+      </article>
+
+      {{ partial "nav.html" . }}
+
+      {{ partial "footer.html" . }}
+
+    </div>
+
+  {{ partial "highlight" . }}
+
+  </body>
+</html>
