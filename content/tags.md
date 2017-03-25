@@ -1,7 +1,7 @@
 +++
 type = "page"
 layout = "tags"
-draft = false
+draft = true
 title = "All Tags"
 
 +++

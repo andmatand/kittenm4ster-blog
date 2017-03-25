@@ -6,7 +6,7 @@
       {{ partial "header.html" . }}
 
       <section>
-        {{ range first (index .Site.Params "HomepagePosts" | default 3) (where .Data.Pages "Type" "post") }}
+        {{ range (where .Data.Pages "Type" "post") }}
         <article>
           {{ .Render "list-item" }}
         </article>

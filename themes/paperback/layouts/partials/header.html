@@ -1,5 +1,9 @@
 <header>
-  <h1>{{ .Title }}</h1>
+  {{- if eq .Kind "taxonomy" -}}
+    <h1>{{ .Data.Singular }}: {{ .Title }}</h1>
+  {{ else }}
+    <h1>{{ .Title }}</h1>
+  {{ end }}
 
   {{ if ne .IsNode true }}
     {{ partial "metadata.html" . }}
